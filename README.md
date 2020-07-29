@@ -4,7 +4,7 @@ An experiment in rendering JSON responses with Jinja.
 
 # Should I use this?
 
-I won't and neither should you.
+No, I won't and neither should you.
 
 # What does it do?
 

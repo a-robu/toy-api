@@ -1,6 +1,6 @@
 # What is This?
 
-An experiment in rendering JSON responses with Jinja.
+An toy that renders JSON responses with Jinja.
 
 # Should I use this?
 

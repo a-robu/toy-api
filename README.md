@@ -35,12 +35,122 @@ Now open http://127.0.0.1:5000/ in your browser.
 
 There is no front-end, only these URLs with there responses.
 
-| Description                           | URL                                               |
-| ------------------------------------- |-------------------------------------------------- |
-| Plain landing page                    |             |
-| Landing page with alternative feature | http://127.0.0.1:5000/api/page/landing?allow_no=1 |
-| Conditional response (with extra field)  | http://127.0.0.1:5000/api/page/personal-details |
-| Conditional response (without extra field)  | http://127.0.0.1:5000/api/page/personal-details?is_on_vacation=1 |
+## [Plain landing page](http://127.0.0.1:5000/api/page/landing)
+
+```json
+{
+  "fields": [
+    {
+      "label": "Your name, as given at birth.", 
+      "type": "input-text-line"
+    }, 
+    {
+      "label": "Write a complete essay on the motions of heavenly bodies.", 
+      "type": "input-text-block"
+    }, 
+    {
+      "label": "Are you currently on vacation?", 
+      "name": "is_on_vacation", 
+      "type": "input-boolean"
+    }, 
+    {
+      "choices": {
+        "evasive": "I'm here to talk business, not animals.", 
+        "yes": "Yes, I do.", 
+        "yes-but": "Yes, but how does that change anything?"
+      }, 
+      "label": "Do you have a pet?", 
+      "type": "input-option"
+    }
+  ], 
+  "heading": "Welcome to Cat & Bear", 
+  "next-page": "personal-details"
+}
+```
+
+## [Landing page with alternative feature](http://127.0.0.1:5000/api/page/landing?allow_no=1)
+
+**+ additional dropdown option**
+
+```json
+{
+  "fields": [
+    {
+      "label": "Your name, as given at birth.", 
+      "type": "input-text-line"
+    }, 
+    {
+      "label": "Write a complete essay on the motions of heavenly bodies.", 
+      "type": "input-text-block"
+    }, 
+    {
+      "label": "Are you currently on vacation?", 
+      "name": "is_on_vacation", 
+      "type": "input-boolean"
+    }, 
+    {
+      "choices": {
+        "evasive": "I'm here to talk business, not animals.", 
+        "no": "No, I know of no such animals.", 
+        "yes": "Yes, I do.", 
+        "yes-but": "Yes, but how does that change anything?"
+      }, 
+      "label": "Do you have a pet?", 
+      "type": "input-option"
+    }
+  ], 
+  "heading": "Welcome to Cat & Bear", 
+  "next-page": "personal-details"
+}
+```
+
+## [Conditional response (with extra field)](http://127.0.0.1:5000/api/page/personal-details)
+
+```json
+{
+  "fields": [
+    {
+      "choices": {
+        "yes": "Yes, I do.", 
+        "yes-of-course": "Of course I like pets!"
+      }, 
+      "label": "Do you like pets?", 
+      "type": "input-option"
+    }
+  ], 
+  "heading": "Personal Details", 
+  "next-page": "confirmation"
+}
+```
+
+## [Conditional response (without extra field)](http://127.0.0.1:5000/api/page/personal-details?is_on_vacation=1)
+
+**+additional question displayed**
+
+```json
+{
+  "fields": [
+    {
+      "input-constraints": {
+        "integer": true, 
+        "min-value": 0
+      }, 
+      "label": "How many years have you been on medication for?", 
+      "type": "input-number"
+    }, 
+    {
+      "choices": {
+        "yes": "Yes, I do.", 
+        "yes-of-course": "Of course I like pets!"
+      }, 
+      "label": "Do you like pets?", 
+      "type": "input-option"
+    }
+  ], 
+  "heading": "Personal Details", 
+  "next-page": "confirmation"
+}
+```
 
 # Pros / Cons
 

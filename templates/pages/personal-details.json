@@ -1,0 +1,24 @@
+{
+    "heading": "Personal Details",
+    "next-page": "confirmation",
+    "fields": [
+        {% if answers.is_on_vacation %}
+            {
+                "type": "input-number",
+                "label": "How many years have you been on medication for?",
+                "input-constraints": {
+                    "integer": true,
+                    "min-value": 0
+                }
+            },
+        {% endif %}
+        {
+            "type": "input-option",
+            "label": "Do you like pets?",
+            "choices": {
+                "yes": "Yes, I do.",
+                "yes-of-course": "Of course I like pets!"
+            }
+        }
+    ]
+}

@@ -33,7 +33,7 @@ Now open http://127.0.0.1:5000/ in your browser.
 
 # Example URLs
 
-There is no front-end, only these URLs with there responses.
+There is no front-end, only these URLs with these responses.
 
 ## [Plain landing page](http://127.0.0.1:5000/api/page/landing)
 
@@ -104,7 +104,7 @@ There is no front-end, only these URLs with there responses.
 }
 ```
 
-## [Conditional response (with extra field)](http://127.0.0.1:5000/api/page/personal-details)
+## [A dependant page](http://127.0.0.1:5000/api/page/personal-details)
 
 ```json
 {
@@ -123,7 +123,7 @@ There is no front-end, only these URLs with there responses.
 }
 ```
 
-## [Conditional response (without extra field)](http://127.0.0.1:5000/api/page/personal-details?is_on_vacation=1)
+## [A dependant page (with additional question shown)](http://127.0.0.1:5000/api/page/personal-details?is_on_vacation=1)
 
 **+additional question displayed**
 

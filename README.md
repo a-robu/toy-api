@@ -154,11 +154,9 @@ Same as the response above, but with an additional value (such as for doing A/B 
 }
 ```
 
-# Pros / Cons
+# Pros & Cons of the Idea
 
-So what are the limitations and what is good about this?
-
-## Pros
+### Pros
 
 - By placing the whole response (essentially) in the Jinja template, it's easy to see what the actual response will be. And we can see the conditional checks there also.
 - It's easy to add feature flags, A/B choices or conditional questions. Just put them in the template.
@@ -168,7 +166,7 @@ So what are the limitations and what is good about this?
 - It's a weird/ad-hoc idea.
 - It's not appropriate to edit the response manually if each field has many properties. In that case, it's more appropriate to generate the field properties in code.
 
-# Limitations
+# Limitations of this Experiment
 
 - Error responses are not taken into consideration here.
 - There is no mechnaism to provide API versioning.

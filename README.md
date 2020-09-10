@@ -1,6 +1,6 @@
 # What is This?
 
-An toy that renders JSON responses with Jinja. I made this because I wanted to try out the idea of creating API responses by rendering JSON in templated. My conclustions following this experiment are at the end of this README.
+An toy that renders JSON responses with Jinja. I made this because I wanted to try out the idea of creating API responses which can be modified with feature flags or for A/B testing by rendering JSON in templated. My conclustions following this experiment are at the end of this README.
 
 # Should I use this?
 
@@ -35,6 +35,8 @@ For convenience, the actual responses are copied in here (so that you can see wh
 
 ## [Plain landing page](http://127.0.0.1:5000/api/page/landing)
 
+This is the basic response (the sections below show variations of it).
+
 ```json
 {
   "fields": [
@@ -67,6 +69,8 @@ For convenience, the actual responses are copied in here (so that you can see wh
 ```
 
 ## [Landing page with alternative feature](http://127.0.0.1:5000/api/page/landing?allow_no=1)
+
+Same as the response above, but with an additional value (such as for doing A/B testing).
 
 **+ additional dropdown option**
 

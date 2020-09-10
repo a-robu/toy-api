@@ -1,14 +1,10 @@
 # What is This?
 
-An toy that renders JSON responses with Jinja.
+An toy that renders JSON responses with Jinja. I made this because I wanted to try out the idea of creating API responses by rendering JSON in templated. My conclustions following this experiment are at the end of this README.
 
 # Should I use this?
 
 No, I won't and neither should you.
-
-# What does it do?
-
-It shows some JSON responses.
 
 # Setup
 

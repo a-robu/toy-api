@@ -31,7 +31,7 @@ Now open http://127.0.0.1:5000/ in your browser.
 
 There is no front-end, only an API that respond to some URLs.
 
-For convenience, the actual responses are copied in here.
+For convenience, the actual responses are copied in here (so that you can see what the code does without having to run it on your machine).
 
 ## [Plain landing page](http://127.0.0.1:5000/api/page/landing)
 
